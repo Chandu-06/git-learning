@@ -1,9 +1,8 @@
 def check_even_odd(num):
-    if num % 2 == 0:
-        return "Even"
-    else:
-        return "Odd"
+    return "Even" if num % 2 == 0 else "Odd"
 
-# Test
-number = int(input("Enter a number: "))
-print(check_even_odd(number))
+try:
+    number = int(input("Enter a number: "))
+    print(check_even_odd(number))
+except ValueError:
+    print("Invalid input! Please enter a number.")
